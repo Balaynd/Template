@@ -1,23 +1,13 @@
 <template>
   <div id="app">
-    <!-- <nav-bar-components/> -->
-    <sidebar-components/>
-    <samplecode/>
     <router-view/>
   </div>
 </template>
 
 <script>
-// import NavBarComponents from './components/NavBarComponents.vue'
-import samplecode from './components/samplecode.vue'
-import SidebarComponents from './components/SidebarComponents.vue'
-
 
 export default{
   components: { 
-    SidebarComponents,
-    samplecode
-    // NavBarComponents, 
     },
 }
 

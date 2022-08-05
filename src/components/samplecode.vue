@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'samplecode',
+  name: 'SampleCode',
 
 }
 </script>
@@ -32,6 +32,7 @@ export default {
     background-color: black;
     color: white;
     display: flex;
+    justify-content: space-between;
 }
 
 .nav-bar-top .leftpanel{
