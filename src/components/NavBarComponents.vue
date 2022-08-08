@@ -1,35 +1,27 @@
 <template>
-<div class="flex-container">
-  <div class="left-container">
-  	<b-button v-b-toggle.sidebar-1 >
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-      <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-    </svg>
-    </b-button>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="menu">
+      <i class="fas fa-bars" id="open"></i>
+      
+    </label>
     <button type="button" class="btn-1">Pages</button>
-  </div>
-  <div class="right-container">
-  	<a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-      </svg>
-    </a>
-    <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
-      <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-      <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
-      </svg>
-    </a>
-    <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
-      <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
-      </svg>
-    </a>
-    <p>Hi, Admin</p>
-  </div>  
-  <button type="button" class="btn-2">A</button>
-</div>
+
+    <input type="checkbox" id="check1">
+    <label for="check1" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    
+    <button type="button" class="btn-2">A</button>
+    <p class="sample">Hi, Admin</p>
+  <ul>
+    <li><a href=""><i class="fas fa-search"></i></a></li>
+    <li><a href=""><i class="fas fa-comment"></i></a></li>
+    <li><a href=""><i class="fas fa-flag"></i></a></li>
+    
+  </ul>
+  
+</nav>
 </template>
 
 <script>
@@ -41,67 +33,152 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f1f1f1;
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-.flex-container > div {
+nav{
+  background: #F2F2F2;
+  height: 60px;
   width: 100%;
-  text-align: center;
-  line-height: 25px;
+  border-bottom: 2px solid #F7F7F7;
 }
 
-.flex-container p{
-  margin: 15px;
-  font-size: 15px;
-  margin-left: 10px;
-}
-
-.flex-container a{
-  margin: 15px;
-}
-
-.flex-container p{
-  font-size: 15px;
-  margin-left: 10px;
-}
-
-.flex-container .left-container{
-  display: flex;
-  justify-content: flex-start;
-  margin: 5px;
-}
-
-.flex-container .right-container{
-  display: flex;
-  justify-content: flex-end;
-
-}
-
-.btn{
-  height: 50px;
-  width: 55px;
-  background-color: black;
+.menu{
+  color: white;
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
 }
 
 .btn-1{
-  background-color: #cccccc;
-  border: none;
-  border-radius: 10px;
-  margin: 5px;
-  color: #0392D8;
+  margin: 15px;
+  border-radius: 5px;
+  border-style: none;
+  line-height: 30px;
+  float: left;
+  background: #E5E5E5;
+}
+
+.btn-1:hover{
+  background: #aaaaaa;
+}
+
+p{
+  float: right;
+  margin-top: 20px;
 }
 
 .btn-2{
+  padding: 10px;
   margin: 5px;
-  margin-left: -10px;
-  height: 50px;
-  width: 70px;
-  background-color: #189C7E;
-  border: none;
   border-radius: 5px;
-  color: white;
+  border-style: none;
+  line-height: 30px;
+  float: right;
+  background: #1AAA8A;
+  margin-right: 20px;
+  width: 45px;
 }
+
+
+
+nav ul{
+  float: right;
+  margin-right: 10x;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 65px;
+  margin-right: 50px;
+}
+
+nav ul li a{
+  color: #0392D8;
+  font-size: 25px;
+  padding: 5px 11px;
+  border-radius: 5px;
+}
+
+a:hover{
+  background: black;
+  transition: .5s;
+}
+
+
+label #open{
+  cursor: pointer;
+  background: #101010;
+  border-radius: 6px;
+  font-size: 35px;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 7px;
+  transition: all .5s;
+}
+
+#check1{
+  display: none;
+}
+
+#check:checked ~ label #open{
+  left: 300px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  float: right;
+  margin: 10px 10px;
+  display: none;
+}
+
+@media (max-width: 925px) {
+  .menu{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(161, 161, 161);
+    top: 80px;
+    right: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover{
+  background: none;
+  color: black;
+  }
+  #check1:checked ~ ul{
+    right: 0;
+  }
+}
+
 </style>

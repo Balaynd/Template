@@ -5,7 +5,7 @@
                 <p>Advance Exterior</p>
             </div>
             <div class="rightpanel">
-                <a href="#">Search</a>
+                <a class="active" href="#">Search</a>
                 <a href="#">Comment</a>
                 <a href="#">Reports</a>
             </div>

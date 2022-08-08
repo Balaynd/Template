@@ -21,6 +21,17 @@ import NavBarComponents from '../NavBarComponents.vue'
     }
 </script>
 
-<style scoped>
-
+<style>
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .sidebar {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width:800px) {
+  /* For mobile phones: */
+  .sidebar {
+    max-width: 100%;
+  }
+}
 </style>
