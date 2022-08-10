@@ -8,7 +8,7 @@
     <header>Advance Exterior</header>
     <ul>
       <li v-for="sidebar in sidebars"> {{ sidebar.note }}
-        <a class="sidebar-menu" ><i class="menu-icon" :class="sidebar.icon"></i>{{ sidebar.text }}</a>
+        <a class="sidebar-menu"><i class="menu-icon" :class="sidebar.icon"></i>{{ sidebar.text }}</a>
       </li>
     </ul>
   </div>
@@ -166,6 +166,19 @@ label #close{
 
 #check:checked ~ label #close{
   left: 255px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .sidebar {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .sidebar {
+    max-width: 100%;
+  }
 }
 
 </style>

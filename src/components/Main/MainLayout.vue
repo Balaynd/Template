@@ -3,6 +3,8 @@
     <sidebar-components/>
     <!-- <sample-code/> -->
     <nav-bar-components/>
+    <sub-nav-bar-components/>
+    <main-content/>
     <router-view/>
     </div>
 </template>
@@ -11,27 +13,19 @@
 // import SampleCode from '../SampleCode.vue'
 import SidebarComponents from '../SidebarComponents.vue'
 import NavBarComponents from '../NavBarComponents.vue'
+import SubNavBarComponents from '../SubNavBarComponents.vue'
+import MainContent from '../MainContent.vue'
 
-    export default {
-        components: {
-            SidebarComponents,
-            NavBarComponents,
-            // SampleCode,
-        }
+export default {
+    components: {
+        SidebarComponents,
+        NavBarComponents,
+        SubNavBarComponents,
+        MainContent,
+        // SampleCode,
     }
+}
 </script>
 
 <style>
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .sidebar {
-    max-width: 200px;
-  }
-}
-@media only screen and (max-width:800px) {
-  /* For mobile phones: */
-  .sidebar {
-    max-width: 100%;
-  }
-}
 </style>

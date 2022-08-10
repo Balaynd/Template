@@ -1,27 +1,22 @@
 <template>
-<nav>
+<div>
     <input type="checkbox" id="check">
     <label for="check" class="menu">
       <i class="fas fa-bars" id="open"></i>
-      
     </label>
     <button type="button" class="btn-1">Pages</button>
-
     <input type="checkbox" id="check1">
     <label for="check1" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    
     <button type="button" class="btn-2">A</button>
     <p class="sample">Hi, Admin</p>
   <ul>
-    <li><a href=""><i class="fas fa-search"></i></a></li>
-    <li><a href=""><i class="fas fa-comment"></i></a></li>
-    <li><a href=""><i class="fas fa-flag"></i></a></li>
-    
+    <li><a href="#"><i class="fas fa-search"></i></a></li>
+    <li><a href="#"><i class="fas fa-comment"></i></a></li>
+    <li><a href="#"><i class="fas fa-flag"></i></a></li>
   </ul>
-  
-</nav>
+</div>
 </template>
 
 <script>
@@ -41,11 +36,11 @@ export default {
   box-sizing: border-box;
 }
 
-nav{
-  background: #F2F2F2;
+div{
+  background: #ffffff;
   height: 60px;
   width: 100%;
-  border-bottom: 2px solid #F7F7F7;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .menu{
@@ -85,20 +80,19 @@ p{
   width: 45px;
 }
 
-
-
-nav ul{
+div ul{
   float: right;
   margin-right: 10x;
 }
 
-nav ul li{
+div ul li{
   display: inline-block;
-  line-height: 65px;
+  line-height: 45px;
   margin-right: 50px;
+  margin-top: 7px;
 }
 
-nav ul li a{
+div ul li a{
   color: #0392D8;
   font-size: 25px;
   padding: 5px 11px;
@@ -113,10 +107,9 @@ a:hover{
 
 label #open{
   cursor: pointer;
-  background: #101010;
   border-radius: 6px;
   font-size: 35px;
-  color: white;
+  color: black;
   padding: 5px 10px;
   margin-top: 7px;
   transition: all .5s;
@@ -166,10 +159,10 @@ label #open{
     text-align: center;
     transition: all .5s;
   }
-  nav ul li{
+  div ul li{
     display: block;
   }
-  nav ul li a{
+  div ul li a{
     font-size: 20px;
   }
   a:hover{
