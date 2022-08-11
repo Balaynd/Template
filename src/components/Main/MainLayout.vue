@@ -4,7 +4,7 @@
     <!-- <sample-code/> -->
     <nav-bar-components/>
     <sub-nav-bar-components/>
-    <main-content/>
+    <!-- <main-content/> -->
     <router-view/>
     </div>
 </template>
@@ -14,14 +14,14 @@
 import SidebarComponents from '../SidebarComponents.vue'
 import NavBarComponents from '../NavBarComponents.vue'
 import SubNavBarComponents from '../SubNavBarComponents.vue'
-import MainContent from '../MainContent.vue'
+// import MainContent from '../MainContent.vue'
 
 export default {
     components: {
         SidebarComponents,
         NavBarComponents,
         SubNavBarComponents,
-        MainContent,
+        // MainContent,
         // SampleCode,
     }
 }

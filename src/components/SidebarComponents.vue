@@ -7,8 +7,8 @@
   <div class="sidebar">
     <header>Advance Exterior</header>
     <ul>
-      <li v-for="sidebar in sidebars"> {{ sidebar.note }}
-        <a class="sidebar-menu"><i class="menu-icon" :class="sidebar.icon"></i>{{ sidebar.text }}</a>
+      <li v-for="sidebar in sidebars" :key="sidebar.id"> {{ sidebar.note }}
+        <a @click="onClick" class="sidebar-menu"><i class="menu-icon" :class="sidebar.icon"></i>{{ sidebar.text }}</a>
       </li>
     </ul>
   </div>
@@ -22,60 +22,79 @@ export default {
     return {
       sidebars: [
         { 
+          id: 1,
           text: 'Dashboard',
-          icon: 'fa fa-th-large'
+          icon: 'fa fa-th-large',
         },
-        { note: 'CUSTOM' },
         { 
+          id: 2,
+          note: 'CUSTOM' 
+        },
+        { 
+          id: 3,
           text: 'User',
           icon: 'fas fa-user-friends'
         },
         { 
+          id: 4,
           text: 'Album',
           icon: 'far fa-images'
         },
         { 
+          id: 5,
           text: 'Photos',
           icon: 'far fa-image'
         },
         { 
-          note: 'FEATURE' 
-        
+          id: 6,
+          note: 'FEATURE'
         },
         { 
+          id: 7,
           text: 'Subcontructor',
           icon: 'fa fa-th-large'
         },
         { 
+          id: 8,
           text: 'Supplier',
           icon: 'fas fa-archive'
         },
         { 
+          id: 9,
           text: 'Calendar',
           icon: 'fa fa-calendar'
         },
         { 
+          id: 10,
           text: 'File Upload',
           icon: 'fa fa-arrow-circle-o-up'
         },
         { 
+          id: 11,
           text: 'Widgets',
           icon: 'fa fa-th-large'
         },
         { 
+          id: 12,
           text: 'Calendar',
           icon: 'fa fa-calendar'
         },
         { 
+          id: 13,
           text: 'Charts',
           icon: 'fa fa-bar-chart'
         },
         { 
+          id: 14,
           text: 'Maps',
           icon: 'far fa-map'
         },
-        
       ]
+    }
+  },
+  methods:{
+    onClick(){
+      this.$router.push({ path: '/AlbumView'});
     }
   },
 }
@@ -136,6 +155,11 @@ a{
   font-size: 25px;
   text-decoration: none;
   line-height: 65px;
+  color: white;
+  cursor: pointer;
+}
+
+i{
   color: white;
 }
 

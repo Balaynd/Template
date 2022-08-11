@@ -12,6 +12,9 @@ const routes = [
     children: [
       { path: '', component: () => import('../views/HomeView') },
       { path: '/about', component: () => import('../views/AboutView') },
+      { path: '/UserView', component: () => import('../views/UserView') },
+      { path: '/AlbumView', component: () => import('../views/AlbumView') },
+      { path: '/PhotosView', component: () => import('../views/PhotosView') },
     ]
   },
 
