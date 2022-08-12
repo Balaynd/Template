@@ -8,7 +8,7 @@
     <header>Advance Exterior</header>
     <ul>
       <li v-for="sidebar in sidebars" :key="sidebar.id"> {{ sidebar.note }}
-        <a @click="onClick" class="sidebar-menu"><i class="menu-icon" :class="sidebar.icon"></i>{{ sidebar.text }}</a>
+        <a @click="onClick(sidebar.path)" class="sidebar-menu"><i class="menu-icon" :class="sidebar.icon"></i>{{ sidebar.text }}</a>
       </li>
     </ul>
   </div>
@@ -33,17 +33,20 @@ export default {
         { 
           id: 3,
           text: 'User',
-          icon: 'fas fa-user-friends'
+          icon: 'fas fa-user-friends',
+          path: '../UserView',
         },
         { 
           id: 4,
           text: 'Album',
-          icon: 'far fa-images'
+          icon: 'far fa-images',
+          path: '../AlbumView',
         },
         { 
           id: 5,
           text: 'Photos',
-          icon: 'far fa-image'
+          icon: 'far fa-image',
+          path: '../PhotosView',
         },
         { 
           id: 6,
@@ -93,8 +96,8 @@ export default {
     }
   },
   methods:{
-    onClick(){
-      this.$router.push({ path: '/AlbumView'});
+    onClick(path){
+      this.$router.push({ path: path })
     }
   },
 }
