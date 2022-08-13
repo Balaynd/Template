@@ -11,10 +11,11 @@ const routes = [
     component: MainLayout,
     children: [
       { path: '', component: () => import('../views/HomeView') },
-      { path: '/about', component: () => import('../views/AboutView') },
-      { path: '/UserView', component: () => import('../views/UserView') },
-      { path: '/AlbumView', component: () => import('../views/AlbumView') },
-      { path: '/PhotosView', component: () => import('../views/PhotosView') },
+      { name: 'AboutPage', path: '/about', component: () => import('../views/AboutView') },
+      { name: 'UserPage', path: '/user', component: () => import('../views/UserView') },
+      { name: 'AlbumPage', path: '/album', component: () => import('../views/AlbumView') },
+      { name: 'PhotoPage', path: '/photo', component: () => import('../views/PhotosView') },
+      { name: 'UserAlbumPage', path: '/user/:userId/albums', component: () => import('../views/AlbumView') }
     ]
   },
 
