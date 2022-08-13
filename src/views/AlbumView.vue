@@ -6,7 +6,13 @@
 
 <script>
     export default {
-        
+        mounted() {
+            console.log(this.$route.params.userId);
+            axios.get('http://localhost:8000/api/user/' . this.$route.params.userId)
+                .then(response => {
+                    this.items = response.data.data;
+                });
+        }
     }
 </script>
 

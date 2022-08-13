@@ -21,73 +21,73 @@ export default {
  data() {
     return {
       sidebars: [
-        { 
+        {
           id: 1,
           text: 'Dashboard',
           icon: 'fa fa-th-large',
         },
-        { 
+        {
           id: 2,
-          note: 'CUSTOM' 
+          note: 'CUSTOM'
         },
-        { 
+        {
           id: 3,
           text: 'User',
           icon: 'fas fa-user-friends',
-          path: '../UserView',
+          path: 'UserPage',
         },
-        { 
+        {
           id: 4,
           text: 'Album',
           icon: 'far fa-images',
-          path: '../AlbumView',
+          path: 'AlbumPage',
         },
-        { 
+        {
           id: 5,
           text: 'Photos',
           icon: 'far fa-image',
-          path: '../PhotosView',
+          path: 'PhotoPage',
         },
-        { 
+        {
           id: 6,
           note: 'FEATURE'
         },
-        { 
+        {
           id: 7,
           text: 'Subcontructor',
           icon: 'fa fa-th-large'
         },
-        { 
+        {
           id: 8,
           text: 'Supplier',
           icon: 'fas fa-archive'
         },
-        { 
+        {
           id: 9,
           text: 'Calendar',
           icon: 'fa fa-calendar'
         },
-        { 
+        {
           id: 10,
           text: 'File Upload',
           icon: 'fa fa-arrow-circle-o-up'
         },
-        { 
+        {
           id: 11,
           text: 'Widgets',
           icon: 'fa fa-th-large'
         },
-        { 
+        {
           id: 12,
           text: 'Calendar',
           icon: 'fa fa-calendar'
         },
-        { 
+        {
           id: 13,
           text: 'Charts',
           icon: 'fa fa-bar-chart'
         },
-        { 
+        {
           id: 14,
           text: 'Maps',
           icon: 'far fa-map'
@@ -97,7 +97,7 @@ export default {
   },
   methods:{
     onClick(path){
-      this.$router.push({ path: path })
+      this.$router.push({ name: path })
     }
   },
 }
